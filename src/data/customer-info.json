@@ -1,0 +1,22 @@
+{"customer": [
+    {
+        "id": 910,
+        "name": "Jo",
+        "address": "Dgte"
+    },
+    {
+        "id": 911,
+        "name": "Anne",
+        "address": "Sibulan"
+    },
+    {
+        "id": 912,
+        "name": "Jean",
+        "address": "Bais"
+    },
+    {
+        "id": 913,
+        "name": "Jennie",
+        "address": "Tanjay"
+    }
+]}

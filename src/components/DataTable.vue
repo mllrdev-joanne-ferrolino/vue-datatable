@@ -29,12 +29,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, reactive } from "vue";
+import { defineComponent, computed, reactive, PropType } from "vue";
 export default defineComponent({
   name: "data-table",
   props: {
     values: {
-      type: Object,
+      type: Array as PropType<any[]>,
     },
   },
   setup(props) {

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import DataTable from "@/components/DataTable.vue";
-import { Employee } from "../models/employee";
+import { IEmployee } from "../models/employee";
 import { defineComponent, PropType } from "vue";
 export default defineComponent({
   name: "Employee",
@@ -15,7 +15,7 @@ export default defineComponent({
   },
   props: {
     dataSource: {
-      type: Array as PropType<Employee[]>,
+      type: Array as PropType<IEmployee[]>,
     },
   }
 });

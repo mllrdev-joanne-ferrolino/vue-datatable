@@ -1,5 +1,5 @@
-import { Employee } from './../models/employee';
-import { Customer } from "../models/customer";
+import { IEmployee } from '../models/IEmployee';
+import { ICustomer } from "../models/ICustomer";
 
 export const Store = {
     customers: [{
@@ -13,7 +13,7 @@ export const Store = {
         name: "Pedro",
         address: "Sibulan",
         contactNumber: "238-4875"
-    }] as Customer[],
+    }] as ICustomer[],
 
     employees: [  {
         id: 1,
@@ -24,7 +24,7 @@ export const Store = {
         id: 2,
         name: "Marie",
         jobTitle: "CEO"
-    }] as Employee[] 
+    }] as IEmployee[] 
 };
 
 

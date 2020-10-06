@@ -1,6 +1,5 @@
 <template>
   <div>
-    <slot></slot>
     <table class="justify-center text-base border border-gray-500 ">
       <thead>
         <tr>
@@ -9,7 +8,7 @@
             v-for="(header, index) in formattedHeaders"
             :key="index"
           >
-            {{ header }}
+            <slot :header="header"></slot>
           </th>
         </tr>
       </thead>
@@ -17,10 +16,10 @@
         <tr
           v-for="(row, index) in data"
           :key="index"
-          class="py-4 bg-white border border-gray-500 hover:bg-blue-300"
+          class="py-4 bg-white border border-gray-500 hover:bg-gray-200"
         >
-          <td v-for="(header, index) in columnHeaders" :key="index" class="">
-            {{ row[header] }}
+          <td v-for="(header, index) in columnHeaders" :key="index">
+            <slot :row="row[header]"></slot>
           </td>
         </tr>
       </tbody>

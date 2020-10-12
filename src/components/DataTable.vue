@@ -8,7 +8,7 @@
             v-for="(header, index) in formattedHeaders"
             :key="index"
           >
-            <slot name="header" :header="header"></slot>
+            <slot name="header" :data="header"></slot>
           </th>
         </tr>
       </thead>

@@ -1,8 +1,8 @@
 <template>
   <div>
     <data-table :items="dataSource">
-      <template #header="{ header }">
-        <div class="text-blue-500">{{ header }}</div>
+      <template #header="{ data }">
+        <div class="text-blue-500">{{ data }}</div>
       </template>
       <template #purchases="{ data }">
         <table-label :color="getColor(data)">{{ data }}</table-label>

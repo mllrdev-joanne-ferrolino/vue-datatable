@@ -1,7 +1,7 @@
 <template>
   <div>
     <data-table :items="dataSource">
-      <template #header="{ header }">{{ header }} </template>
+      <template #header="{ data }">{{ data }} </template>
       <template #image="{ data }">
         <img :src="data" style="height:100px"/>
       </template>

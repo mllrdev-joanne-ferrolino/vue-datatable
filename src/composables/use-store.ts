@@ -6,24 +6,32 @@ export const Store = {
         id: 1,
         name: "Juan",
         address: "Dgte",
-        contactNumber: "231-9302"
+        contactNumber: "231-9302",
+        purchases: 3
     },
     {
         id: 2,
         name: "Pedro",
         address: "Sibulan",
-        contactNumber: "238-4875"
+        contactNumber: "238-4875",
+        purchases: 12
     }] as ICustomer[],
 
     employees: [  {
         id: 1,
         name: "Anne",
-        jobTitle: "HR"
+        jobTitle: "HR",
+        proficiency: 30,
+        office: "Philippines",
+        image: "https://bit.ly/3lucXQS" 
     },
     {
         id: 2,
         name: "Marie",
-        jobTitle: "CEO"
+        jobTitle: "CEO",
+        proficiency: 90,
+        office: "Sweden",
+        image: "https://bit.ly/3nOxuBN"
     }] as IEmployee[] 
 };
 

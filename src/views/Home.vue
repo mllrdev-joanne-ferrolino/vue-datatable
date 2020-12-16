@@ -1,28 +1,25 @@
 <template>
-  <div class="home">
-    <data-table :values="values"></data-table>
+  <div class="grid grid-cols-2 gap-5 justify-items-center home">
+    <customer :dataSource="customerStore"></customer>
+    <employee :dataSource="employeeStore"></employee>
   </div>
 </template>
 
 <script lang="ts">
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-import DataTable from "@/components/DataTable.vue";
-import json from "@/data/customer-info.json";
-import { defineComponent } from "@vue/composition-api";
+import Customer from "@/components/Customer.vue";
+import Employee from "@/components/Employee.vue";
+import { useStore } from '@/composables/use-store';
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld,
-    DataTable
+    Customer,
+    Employee
   },
-  setup(){
-    function castType<T>(data: T){
-      return data;
-    }
-    const values = castType(json.customer);
-    return { values };
+  setup() {
+    const { customerStore, employeeStore } = useStore();
+    return { customerStore, employeeStore };
   }
 });
 </script>
